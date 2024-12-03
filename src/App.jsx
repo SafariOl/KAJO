@@ -7,6 +7,17 @@ import Footer from './components/Footer'
 import Promo from './components/Promo'
 
 export default function App() {
+  const [fontsLoaded, setFontsLoaded] = useState(false);
+
+  useLayoutEffect(() => {
+    document.fonts.ready.then(() => {
+      setFontsLoaded(true);
+    });
+  }, []);
+
+  if (!fontsLoaded) {
+    return null;
+  }
 
   return (
     <div className='wrapper'> 

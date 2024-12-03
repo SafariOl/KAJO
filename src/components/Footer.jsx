@@ -19,7 +19,7 @@ export default function Footer() {
             <div className="creator-block">
                 <p className="component-Button">By SafariOl</p>
                 <button 
-                    onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})} 
+                    onClick={() => window.scrollTo(0, 0)} 
                     className='component-Button-Text'>
                         Back To Top
                 </button>
